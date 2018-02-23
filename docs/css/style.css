@@ -19,7 +19,8 @@ body {
   font-family: Lato, sans-serif;
   color: #222324;
   line-height: 1.6;
-  background-color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.884),rgba(0, 0, 0, 0.76), rgb(72, 116, 194)), url(../img/electron-blockchain.jpg) fixed center center;
+  background-size: cover;
 }
 
 /* Typography */
@@ -152,6 +153,150 @@ a:focus {
   outline: none;
 }
 
+/* Particles */
+#particles-js { 
+  position:absolute; 
+  width: 100%; 
+  height: 100%; 
+  background-color: #000000; 
+  background-image: url("https://resonova.com/img/blockchain-world-dark2.jpg"); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: 50% 50%; 
+} 
+
+canvas { 
+  display: block; 
+  vertical-align: bottom; 
+}
+
+/* Services */
+.serviceBox {
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 21px;
+}
+
+.serviceBox .service-icon {
+  width: 78px;
+  height: 78px;
+  border-radius: 3px;
+  background: #3E9C50;
+  margin: 0 auto;
+  position: absolute;
+  top: -34px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: all 0.3s ease-out 0s;
+}
+
+.serviceBox:hover .service-icon {
+  transform: rotate(45deg);
+}
+
+.serviceBox .service-icon span {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 3px;
+  background: #fff;
+  font-size: 30px;
+  color: #3E9C50;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s ease-out 0s;
+}
+
+.serviceBox .service-icon span i {
+  transition: all 0.3s ease-out 0s;
+}
+
+.serviceBox:hover .service-icon span i {
+  transform: rotate(-45deg);
+}
+
+.serviceBox .service-content {
+  background: #3E9C50;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 55px 15px;
+  position: relative;
+}
+
+.serviceBox .service-content:before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  margin: 0 auto;
+  position: absolute;
+  top: -37px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transition: all 0.3s ease-out 0s;
+}
+
+.serviceBox:hover .service-content:before {
+  transform: rotate(45deg);
+}
+
+.serviceBox .title {
+  font-size: 20px;
+  font-weight: 550;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 25px 0;
+  position: relative;
+  transition: all 0.3s ease-out 0s;
+}
+
+.serviceBox:hover .title {
+  color: #fff;
+}
+
+.serviceBox .description {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.serviceBox .read-more {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #3E9C50;
+  font-size: 20px;
+  color: #3E9C50;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-out 0s;
+}
+
+.serviceBox .read-more:hover {
+  border: 1px solid #3E9C50;
+  background: #3E9C50;
+  color: #fff;
+  text-decoration: none;
+}
+
 /*----------------------------------
   Selection
 ------------------------------------*/
@@ -242,6 +387,17 @@ fieldset[disabled] .s-btn {
   padding: 0.9375rem 1.5625rem 0.75rem;
 }
 
+
+/* Backgrounds */
+#ico {
+  background: linear-gradient(rgba(0, 0, 0, 0.725), rgba(26, 43, 73, 0.835), rgb(72, 116, 194)), url(../img/electron-blockchain.jpg) fixed center center;
+  background-size: cover;
+}
+
+#culture {
+  background: linear-gradient(rgb(72, 116, 194), rgba(39, 62, 102, 0.835), rgba(62, 156, 79, 0.849)), url(../img/electron-blockchain.jpg) fixed center center;
+  background-size: cover;
+}
 /* Styles
 ------------------------------ */
 .s-btn--white-brd {
@@ -311,17 +467,17 @@ fieldset[disabled] .s-btn {
 }
 
 .s-btn--primary-brd {
-  color: #13b1cd;
-  background: transparent;
+  color: #fff;
+  background: #3E9C50;
   border-width: 0.0625rem;
   border-style: solid;
-  border-color: #13b1cd;
+  border-color: #3E9C50;
 }
 
 .s-btn--primary-brd:focus, .s-btn--primary-brd:hover {
   color: #fff;
-  background: #13b1cd;
-  border-color: #13b1cd;
+  background:transparent;
+  border-color: #fff;
 }
 
 .s-btn-icon--white-brd {
@@ -1057,7 +1213,7 @@ fieldset[disabled] .s-btn {
 .s-scroll-to-section-v1--bc {
   position: absolute;
   left: 50%;
-  bottom: 0.625rem;
+  bottom: 1.625rem;
   z-index: 1;
   -webkit-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0);
@@ -2064,7 +2220,7 @@ fieldset[disabled] .s-btn {
   width: 1.875rem;
   height: 3rem;
   z-index: 9;
-  background: #13b1cd;
+  background: #3E9C50;
   border-radius: 3.125rem;
   text-align: center;
   transition-duration: 300ms;
@@ -2090,7 +2246,7 @@ fieldset[disabled] .s-btn {
 }
 
 .s-back-to-top:hover:before {
-  color: #13b1cd;
+  color: #3E9C50;
 }
 
 .s-back-to-top:focus, .s-back-to-top:hover {
