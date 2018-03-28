@@ -385,8 +385,8 @@ fieldset[disabled] .s-btn {
 
 
 /* Backgrounds */
-#ico {
-  background: #333333;
+#start {
+  background: linear-gradient(#333333ef, #333333ef, #333333ef),url(../img/blockchain-solution.jpg) fixed center center;;
   background-size: cover;
 }
 
@@ -396,7 +396,12 @@ fieldset[disabled] .s-btn {
 }
 
 #js__scroll-to-culture {
-  background: #4874c2;
+  background:linear-gradient(#4875c2dc, #4875c2dc, #4875c2dc),url(../img/1920x1080/city-scape1.jpg) fixed center center;
+  background-size: cover;
+}
+
+.education {
+  background:#333333;
   background-size: cover;
 }
 
@@ -513,16 +518,10 @@ fieldset[disabled] .s-btn {
   margin: 0 auto;
   opacity: 1;
   cursor: pointer;
-  transition-duration: 200ms;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 }
 
 .s-clients-v1:hover {
   opacity: .8;
-  transition-duration: 200ms;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 }
 
 /*----------------------------------
@@ -1240,11 +1239,9 @@ fieldset[disabled] .s-btn {
 ------------------------------------*/
 .s-team-v1 {
   position: relative;
-  cursor: pointer;
 }
 
 .s-team-v1:before {
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
@@ -1258,6 +1255,23 @@ fieldset[disabled] .s-btn {
 
 .s-team-v1:hover:before {
   box-shadow: 0 0 1.25rem 0.3125rem rgba(34, 35, 36, 0.07);
+}
+
+.s-team-v1 img {
+  filter: grayscale(100%);
+}
+
+.s-team-v1 .social i {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.s-team-v1 .social a{
+  color:#3e9c50
+}
+
+.s-team-v1 .social a:hover{
+  color:#b3b3b3
 }
 
 /*----------------------------------
@@ -1293,6 +1307,67 @@ fieldset[disabled] .s-btn {
   z-index: 1;
   background: rgba(34, 35, 36, 0.85);
   content: " ";
+}
+
+/*----------------------------------
+  Contact
+------------------------------------*/
+.social-contact {
+  text-align: center;
+}
+
+.social-contact i {
+  font-size: 40px;
+  color: #fff;
+  line-height: 24px;
+  cursor: pointer;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.social-contact i:hover {
+  background: none;
+  color: #333333;
+}
+
+#contact .form #sendmessage {
+  color: #3E9C50;
+  border: 1px solid #3E9C50;
+  display: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact .form #errormessage {
+  color: red;
+  display: none;
+  border: 1px solid red;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact .form #sendmessage.show,
+#contact .form #errormessage.show,
+#contact .form .show {
+  display: block;
+}
+
+#contact .form .validation {
+  color: red;
+  display: none;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+#contact .form input,
+#contact .form textarea {
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /*----------------------------------
@@ -1768,6 +1843,10 @@ fieldset[disabled] .s-btn {
   .s-header-bg-overlay.-is-open .s-header__action-item:nth-child(5) {
     -webkit-transition: all 0.4s 2.0s ease-out;
     transition: all 0.4s 2.0s ease-out;
+  }
+  .s-header-bg-overlay.-is-open .s-header__action-item:nth-child(6) {
+    -webkit-transition: all 0.4s 2.4s ease-out;
+    transition: all 0.4s 2.4s ease-out;
   }
 }
 
@@ -2339,87 +2418,6 @@ fieldset[disabled] .s-btn {
   max-height: 200px;
   height: auto;
   filter: grayscale(100%);
-}
-
-/* Team */
-
-#team {
-  background:#fff;padding:80px 0;height:1170px
-}
-
-@media(max-width:769px){
-  #team{padding-bottom:1780px
-  }
-}
-
-@media(max-width:426px){
-  #team{padding-bottom:3340px
-  }
-}
-
-@media(max-width:376px){
-  #team{padding-bottom:3340px
-  }
-}
-
-@media(max-width:321px){
-  #team{padding-bottom:3340px
-  }
-}
-
-#team .member{
-  text-align:center;
-  margin-bottom:20px;
-}
-
-#team .member .pic{
-  margin-bottom:15px;
-  overflow:hidden;
-  height:auto;
-  max-width:100%
-}
-
-#team .member .pic img{
-  max-width:200px;
-  width:100%;
-  max-height:200px;
-  height:auto;
-  -webkit-filter:grayscale(100%);
-  filter:grayscale(100%);
-  position:relative;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  margin:auto
-}
-
-#team .member h4{
-  font-weight:700;
-  margin-bottom:2px
-}
-
-#team .member span{
-  font-style:italic;
-  display:block;
-  font-size:13px
-}
-
-#team .member .social{
-  margin-top:15px
-}
-
-#team .member .social a{
-  color:#3e9c50
-}
-
-#team .member .social a:hover{
-  color:#b3b3b3
-}
-
-#team .member .social i{
-  font-size:18px;
-  margin:0 2px
 }
 
 /* Position
