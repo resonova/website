@@ -1,0 +1,146 @@
+/*-----------------------------------------
+
+    << Glass CSS >>
+    
+    Created by h8rt3rmin8r
+    (https://h8rt3rmin8r.com)
+    
+-----------------------------------------*/
+
+#glass {
+    background: rgba(255, 255, 255, 0);
+    padding: 80px 0;
+    height: 300px;
+}
+
+#glass .glass-content {
+    background: rgba(0, 0, 0, 0.678);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#glass .glass-title {
+    color: rgb(255, 255, 255);
+    font-weight: 750;
+    font-size: 30px;
+}
+
+#glass .glass-titleB {
+    color: #4874C2;
+    font-weight: 750;
+    font-size: 30px;
+}
+
+#glass .glass-titleC {
+    color: #3E9C50;
+    font-weight: 750;
+    font-size: 30px;
+}
+
+#glass .glass-text {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+}
+
+#glass .glass-textB {
+    color: #4874C2;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+}
+
+#glass .glass-textC {
+    color: #3E9C50;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+}
+
+@media (max-width:768px) {
+    #glass .glass-text {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #glass .glass-textB {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #glass .glass-textC {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #glass {
+        padding-bottom: 300px;
+    }
+}
+
+#glass .glass-text:last-child {
+    margin-bottom: 0;
+}
+
+#glass img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#glass .glass-btn-container {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#glass .glass-btn {
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+    min-width: 190px;
+    border: 2px solid #3E9C50;
+    color: #3E9C50;
+    background: rgba(0, 0, 0, 0.678);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#glass .glass-btn:hover {
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid rgba(0, 0, 0, 0);
+    color: white;
+}
+
+#glass .glass-btn-B {
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+    min-width: 190px;
+    border: 2px solid #4874C2;
+    color: #4874C2;
+    background: rgba(0, 0, 0, 0.678);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#glass .glass-btn-B:hover {
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid rgba(0, 0, 0, 0);
+    color: white;
+}
