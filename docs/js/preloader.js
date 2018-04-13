@@ -1,6 +1,6 @@
 // Preloader
     $(window).on('load', function () {
-        $('#preloader').delay(200).fadeOut('slow', function () {
+        $('#preloader').delay(1000).fadeOut('slow', function () {
             $(this).remove();
         });
     });
