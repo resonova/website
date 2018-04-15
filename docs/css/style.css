@@ -199,6 +199,37 @@ figcaption {
     color: white;
 }
 
+/* Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 0px;
+	background-color: #333333;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #4874c2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5687dd; 
+}
+
+@media (max-width: 61.9em) {
+  ::-webkit-scrollbar {
+    visibility: hidden;
+  }
+}
+
 /* Prelaoder */
 
 #preloader {
@@ -1410,6 +1441,8 @@ fieldset[disabled] .s-btn {
 ------------------------------------*/
 .social-contact {
   text-align: center;
+	margin-top: 20px;
+	margin-bottom: -50px;
 }
 
 .social-contact i {
@@ -2403,7 +2436,7 @@ fieldset[disabled] .s-btn {
 ------------------------------------*/
 .s-back-to-top {
   position: fixed;
-  right: 3.125rem;
+  right: 0.725rem;
   bottom: -3.125rem;
   display: block;
   width: 1.875rem;
