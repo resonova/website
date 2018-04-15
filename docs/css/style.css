@@ -457,7 +457,7 @@ fieldset[disabled] .s-btn {
 }
 
 #about {
-  background:linear-gradient(#4875c2dc, #4875c2dc, #4875c2dc),url(../img/1920x1080/city-scape1.jpg) fixed center center;
+  background:linear-gradient(#4875c2dc, #4875c2dc, #4875c2dc),url(../img/city-scape1.jpg) fixed center center;
   background-size: cover;
 }
 
