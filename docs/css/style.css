@@ -183,6 +183,7 @@ figure:hover {
 figcaption {
     max-height: 15px;
     font-size: 13px;
+		color: #333333;
 }
 
 /* Learn More - Down Arrow */
@@ -455,7 +456,7 @@ fieldset[disabled] .s-btn {
   background-size: cover;
 }
 
-#js__scroll-to-culture {
+#about {
   background:linear-gradient(#4875c2dc, #4875c2dc, #4875c2dc),url(../img/1920x1080/city-scape1.jpg) fixed center center;
   background-size: cover;
 }
@@ -1306,7 +1307,7 @@ fieldset[disabled] .s-btn {
 .s-scroll-to-section-v1--bc {
   position: absolute;
   left: 50%;
-  bottom: 1.625rem;
+  bottom: 1.725rem;
   z-index: 1;
   -webkit-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0);
