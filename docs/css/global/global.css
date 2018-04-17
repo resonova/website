@@ -764,7 +764,7 @@ h/*----------------------------------
   text-align: center;
 }
 
-.g-margin-b-250--md {
+.g-text-left--xs {
   text-align: left;
 }
 
@@ -774,6 +774,10 @@ h/*----------------------------------
 
 .g-text-inherit--xs {
   text-align: inherit;
+}
+
+.g-text-justify--xs {
+  text-align: justify;
 }
 
 /* Small screen / phone */
