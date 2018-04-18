@@ -517,6 +517,11 @@ fieldset[disabled] .s-btn {
   background-size: cover;
 }
 
+.contact-background {
+	background:linear-gradient(rgb(51, 51, 51, 0.85), rgb(51, 51, 51, 0.85), rgb(51, 51, 51, 0.85)),url(../img/connect-with-us.jpg) fixed center center;
+  background-size: cover;
+}
+
 .education {
   background:#333333;
   background-size: cover;
