@@ -1461,6 +1461,13 @@ fieldset[disabled] .s-btn {
 	padding-bottom: 10px;
 }
 
+@media (max-width: 33.9em) {
+  .partner-network {
+    width: 60%;
+		left: 20%;
+  }
+}
+
 /*----------------------------------
   Contact
 ------------------------------------*/
