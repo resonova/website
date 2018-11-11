@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GlitchPad</title>
+    <meta name="description" content="A collection of notepads, IDEs, and other useful web tools by ResoNova">
+    <meta name="keywords" content="IDE, cloud edit, cloud ide, cloud coding, coding, html coding, browser notepad, browser ide, notepad">
+
+    <!-- ****** FAVICONS AND BRANDING ****** -->
+    <link rel="apple-touch-icon" sizes="57x57" href="https://glitchpad.com/assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://glitchpad.com/assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://glitchpad.com/assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://glitchpad.com/assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://glitchpad.com/assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://glitchpad.com/assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://glitchpad.com/assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://glitchpad.com/assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://glitchpad.com/assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://glitchpad.com/assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://glitchpad.com/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://glitchpad.com/assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://glitchpad.com/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#033f00">
+    <meta name="msapplication-TileImage" content="https://glitchpad.com/assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#033f00">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="https://glitchpad.com/assets/favicons/android-icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#033f00">
+    <meta name="apple-mobile-web-app-title" content="GlitchPad">
+    <link rel="apple-touch-icon-precomposed" href="https://glitchpad.com/assets/favicons/apple-icon-precomposed.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="https://glitchpad.com/assets/favicons/ms-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+    <link rel="shortcut icon" href="https://glitchpad.com/assets/favicons/favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r62/three.min.js"></script>
+<script src="https://resonova.github.io/cdn/js/trackball-crtl.js"></script>
+    <style>
+        body {
+  overflow: hidden;
+  margin: 0;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <script type="x-shader/x-vertex" id="vertexShader">
+        // uniform float amplitude;
+  // attribute float size;
+  uniform float amplitude;
+
+  attribute vec3 vertexColor;
+
+  varying vec4 varColor;
+
+  void main()
+  {
+  varColor = vec4(vertexColor, 1.0);
+
+  vec4 pos = vec4(position, 1.0);
+  pos.z *= amplitude;
+
+  vec4 mvPosition = modelViewMatrix * pos;
+
+  gl_PointSize = 1.0;
+  gl_Position = projectionMatrix * mvPosition;
+  }
+</script>
+
+    <script type="x-shader/x-fragment" id="fragmentShader">
+        varying vec4 varColor;
+
+  void main()
+  {
+  gl_FragColor = varColor;
+  }
+</script>
+
+<script>
+    var container;
+var camera, scene, renderer;
+var controls;
+
+var shaderUniforms, shaderAttributes;
+
+var particles = [];
+var particleSystem;
+
+var imageWidth = 847;
+var imageHeight = 524;
+var imageData = null;
+
+var animationTime = 0;
+var animationDelta = 0.03;
+
+init();
+// tick();
+
+function init() {
+  createScene();
+  createControls();
+  createPixelData();
+
+  window.addEventListener('resize', onWindowResize, false);
+}
+
+function createScene() {
+  container = document.getElementById('container');
+
+  scene = new THREE.Scene();
+
+  camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 1, 10000);
+  camera.position.z = 3000;
+  camera.lookAt(scene.position)
+
+  renderer = new THREE.WebGLRenderer({
+    antialias: true
+  });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setClearColor(0x000000, 1);
+
+  container.appendChild(renderer.domElement);
+}
+
+function createControls() {
+  controls = new THREE.TrackballControls(camera);
+
+  controls.rotateSpeed = 1.0;
+  controls.zoomSpeed = 1.2;
+  controls.panSpeed = 0.8;
+
+  controls.noZoom = false;
+  controls.noPan = true;
+
+  controls.staticMoving = true;
+  controls.dynamicDampingFactor = 0.3;
+}
+
+function createPixelData() {
+  var image = document.createElement("img");
+  var canvas = document.createElement("canvas");
+  var context = canvas.getContext("2d");
+  
+  image.crossOrigin = "Anonymous";
+  image.onload = function() {
+    image.width = canvas.width = imageWidth;
+    image.height = canvas.height = imageHeight;
+    
+    context.fillStyle = context.createPattern(image, 'no-repeat');
+    context.fillRect(0, 0, imageWidth, imageHeight);
+    //context.drawImage(image, 0, 0, imageWidth, imageHeight);
+    
+    imageData = context.getImageData(0, 0, imageWidth, imageHeight).data;
+
+    createPaticles();
+    tick();
+  };
+  
+  image.src = "https://resonova.github.io/cdn/img/blockchain-world-dark-847x524.jpeg";
+}
+
+function createPaticles() {
+  var colors = [];
+  var weights = [0.2126, 0.7152, 0.0722];
+  var c = 0;
+
+  var geometry, material;
+  var x, y;
+  var zRange = 400;
+
+  geometry = new THREE.Geometry();
+  geometry.dynamic = false;
+
+  x = imageWidth * -0.5;
+  y = imageHeight * 0.5;
+
+  shaderAttributes = {
+    vertexColor: {
+      type: "c",
+      value: []
+    }
+  };
+
+  shaderUniforms = {
+    amplitude: {
+      type: "f",
+      value: 0.5
+    }
+  };
+
+  var shaderMaterial = new THREE.ShaderMaterial({
+    attributes: shaderAttributes,
+    uniforms: shaderUniforms,
+    vertexShader: document.getElementById("vertexShader").textContent,
+    fragmentShader: document.getElementById("fragmentShader").textContent
+  })
+
+  for (var i = 0; i < imageHeight; i++) {
+    for (var j = 0; j < imageWidth; j++) {
+      var color = new THREE.Color();
+
+      color.setRGB(imageData[c] / 255, imageData[c + 1] / 255, imageData[c + 2] / 255);
+      shaderAttributes.vertexColor.value.push(color);
+
+      var weight = color.r * weights[0] +
+        color.g * weights[1] +
+        color.b * weights[2];
+
+      var vertex = new THREE.Vector3();
+
+      vertex.x = x;
+      vertex.y = y;
+      vertex.z = (zRange * -0.5) + (zRange * weight);
+
+      geometry.vertices.push(vertex);
+
+      c += 4;
+      x++;
+    }
+
+    x = imageWidth * -0.5;
+    y--;
+  }
+  console.log(geometry.vertices.length)
+  particleSystem = new THREE.ParticleSystem(geometry, shaderMaterial);
+
+  scene.add(particleSystem);
+}
+
+function tick() {
+  requestAnimationFrame(tick);
+
+  update();
+  render();
+}
+
+function update() {
+  shaderUniforms.amplitude.value = Math.sin(animationTime);
+
+  animationTime += animationDelta;
+
+  controls.update();
+}
+
+function render() {
+  renderer.render(scene, camera);
+}
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+</script>
+</body>
+
+</html>
