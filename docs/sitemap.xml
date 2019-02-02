@@ -4,54 +4,67 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
   <loc>https://resonova.com/</loc>
-  <lastmod>2018-12-11T23:22:22+00:00</lastmod>
+  <lastmod>2019-02-02T21:59:35+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://resonova.com/about/</loc>
-  <lastmod>2018-12-11T23:22:22+00:00</lastmod>
+  <lastmod>2019-02-02T21:59:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://resonova.com/team/</loc>
+  <lastmod>2019-02-02T21:59:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://resonova.com/approach/</loc>
+  <lastmod>2019-02-02T21:59:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://resonova.com/trends/</loc>
-  <lastmod>2018-12-11T23:22:22+00:00</lastmod>
+  <lastmod>2019-02-02T21:59:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://resonova.com/innovation/</loc>
-  <lastmod>2018-12-11T23:22:22+00:00</lastmod>
+  <lastmod>2019-02-02T21:59:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://resonova.com/impact/</loc>
-  <lastmod>2018-12-11T23:22:22+00:00</lastmod>
+  <lastmod>2019-02-02T21:59:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://resonova.com/contact/</loc>
-  <lastmod>2018-12-11T23:22:22+00:00</lastmod>
+  <lastmod>2019-02-02T21:59:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://resonova.com/schedule/</loc>
-  <lastmod>2018-12-11T23:22:22+00:00</lastmod>
+  <lastmod>2019-02-02T21:59:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://resonova.com/privacy-policy/</loc>
-  <lastmod>2018-12-11T23:22:22+00:00</lastmod>
+  <lastmod>2019-02-02T21:59:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://resonova.com/terms-of-service/</loc>
-  <lastmod>2018-12-11T23:22:22+00:00</lastmod>
+  <lastmod>2019-02-02T21:59:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://resonova.com/docs/ResoNova-Brand-Standards.pdf</loc>
-  <lastmod>2018-12-11T23:22:22+00:00</lastmod>
+  <lastmod>2019-02-02T21:59:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
