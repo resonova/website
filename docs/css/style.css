@@ -468,17 +468,17 @@ fieldset[disabled] .s-btn {
 }
 
 .about-background {
-  background: linear-gradient(#333333ef, #333333ef, #333333ef), url(../img/city-scape-2.jpeg) fixed center center;
+  background: linear-gradient(#333333ef, #333333cb, #33333396), url(../img/city-scape-2.jpeg) fixed center center;
   background-size: cover;
 }
 
 .team-background {
-  background: linear-gradient(#333333ef, #333333ef, #333333ef), url(../img/team.jpeg) fixed center center;
+  background: linear-gradient(#333333ef, #333333cb, #33333396), url(../img/team.jpeg) fixed center center;
   background-size: cover;
 }
 
 .approach-background {
-  background: linear-gradient(#333333ef, #333333ef, #333333ef), url(../img/approach.jpeg) fixed center center;
+  background: linear-gradient(#333333ef, #333333cb, #33333396), url(../img/approach.jpeg) fixed center center;
   background-size: cover;
 }
 
