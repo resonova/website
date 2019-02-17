@@ -574,6 +574,12 @@
 	</div>
 	<script src="../js/imagesloaded.pkgd.min.js"></script>
 	<script type="text/javascript" src="../js/global.min.js"></script>
+	<script>
+		imagesLoaded('.glitch__img', { background: true }, () => {
+		document.body.classList.remove('loading');
+		document.body.classList.add('imgloaded');
+	});
+	</script>
 </body>
 
 </html>
