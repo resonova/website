@@ -451,8 +451,24 @@ fieldset[disabled] .s-btn {
   background-repeat: no-repeat;
 }
 
+#trend-intel-2 {
+  background: linear-gradient(#ffffffe8, #fffffff3, #fffffffb, #ffffff), url(../img/innovation-matrix.png) fixed center center;
+  background-size: cover;
+}
+
+#trend-intel-3 {
+  background: linear-gradient(90deg, #333333, #333333f1, #333333d0, #333333c0), url(../img/impact-building.jpg) fixed center center;
+  background-size: cover;
+}
+
 #trends-2 {
   background: linear-gradient(90deg, #333333, #333333f1, #333333d0, #333333c0), url(../img/trend-hashtags-cropped-min.png) fixed center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#trends-3 {
+  background: linear-gradient(90deg, #2a4470f6, #2a4470c2, #385a96ad, #4875c2b0), url(../img/trend-intelligence) fixed center center;
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -474,6 +490,11 @@ fieldset[disabled] .s-btn {
 
 .about-background {
   background: linear-gradient(#333333ef, #333333cb, #33333396), url(../img/city-scape-2.jpeg) fixed center center;
+  background-size: cover;
+}
+
+.services-background {
+  background: linear-gradient(#333333ef, #333333cb, #33333396), url(../img/services.jpeg) fixed center center;
   background-size: cover;
 }
 
@@ -507,8 +528,18 @@ fieldset[disabled] .s-btn {
   background-size: cover;
 }
 
-.services-background {
-  background: linear-gradient(rgb(51, 51, 51, 0.85), rgb(51, 51, 51, 0.85), rgb(51, 51, 51, 0.85)), url(../img/city-scape.jpg) fixed center center;
+.finance-use-bg {
+  background: linear-gradient(90deg, #ffffff, #ffffffee, #ffffffc9, #ffffffa6, #ffffff7a), url(../img/finance-use.jpg) fixed center center;
+  background-size: cover;
+}
+
+.marketing-use-bg {
+  background: linear-gradient(90deg, #ffffff, #ffffffee, #ffffffc9, #ffffffa6, #ffffff7a), url(../img/marketing-use.jpg) fixed center center;
+  background-size: cover;
+}
+
+.retail-use-bg {
+  background: linear-gradient(90deg, #ffffff, #ffffffee, #ffffffc9, #ffffffa6, #ffffff7a), url(../img/retail-use.jpg) fixed center center;
   background-size: cover;
 }
 
@@ -728,8 +759,29 @@ fieldset[disabled] .s-btn {
 /*----------------------------------
   Topics Sections
 ------------------------------------*/
+.trend-intel {
+  height: 80vh;
+  padding-top: 20vh;
+}
+
+.trend-intel-topic {
+  height: 100vh;
+}
+
+.trend-intel-topic img {
+  width: 75%;
+}
+
+.trend-intel-topic-2 {
+  height: 100%;
+}
+
+#trend-intel {
+  padding-top: 10vh;
+}
+
 #trends {
-  padding-top: 10vh
+  padding-top: 10vh;
 }
 
 .topics {
@@ -830,6 +882,10 @@ fieldset[disabled] .s-btn {
 @media (max-height: 47.9em) {
   .topics {
     height: 70vh;
+  }
+
+  .trend-intel-topic {
+    height: 100%;
   }
 
   .topics-img {
@@ -3140,6 +3196,7 @@ main {
     color: #3E9C50;
   }
 }
+
 
 /*----------------------------------
   Footer
