@@ -1,5 +1,0 @@
- | Signature">
-    <meta property="og:image" content="https://resonova.com/img/resonova-signature-logo.png">
-    <meta property="og:url" content="https://resonova.com/">
-    <meta property="og:site_name" content="ResoNova International Consulting, LLC">
-    <meta property="og:description" content="
