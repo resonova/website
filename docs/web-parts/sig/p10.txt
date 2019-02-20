@@ -1,7 +1,0 @@
-</a>
-                </span>
-                <br>
-                <!-- EMAIL ADDRESS -->
-                <span style="font-size:10pt;font-family:Century Gothic,sans-serif">Email:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
-                <span title="Email" style="font-size:10pt;font-family:Century Gothic,sans-serif">
-                    <a href="mailto:
