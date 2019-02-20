@@ -523,9 +523,14 @@ fieldset[disabled] .s-btn {
   background-size: cover;
 }
 
-.contact-bg {
+.contact-front-bg {
   background-color: #4874c2;
   background-size: cover;
+}
+
+.contact-bg{
+  background: linear-gradient(#333333c5,#333333c5,#333333c5), url(../img/office-building-up.jpeg) fixed center center;
+  background-size:cover
 }
 
 .contact-sm {
