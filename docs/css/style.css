@@ -436,7 +436,7 @@ fieldset[disabled] .s-btn {
 
 /* Backgrounds */
 #start {
-  background: linear-gradient(90deg, #333333c0, #333333ab, #3333338f, #33333357), url(https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) fixed center center;
+  background: linear-gradient(90deg, #333333c0, #333333ab, #3333338f, #33333357), url(https://resonova.com/img/modern-background.webp) fixed center center;
   background-size: cover;
 }
 
